@@ -4,12 +4,16 @@
 
 .stage-wrapper * {
     box-sizing: border-box;
+
+
 }
 
 .stage-canvas-wrapper {
     /* Hides negative space between edge of rounded corners + container, when selected */
     user-select: none;
+    margin-top: 6vh;
 }
+
 
 .stage-wrapper.full-screen {
     position: fixed;

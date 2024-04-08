@@ -58,11 +58,13 @@ const mapStateToProps = state => ({
     isPlayerOnly: state.scratchGui.mode.isPlayerOnly
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
     onSetStageLarge: () => dispatch(setStageSize(STAGE_SIZE_MODES.large)),
     onSetStageSmall: () => dispatch(setStageSize(STAGE_SIZE_MODES.small)),
+    onSetStageHide: () => dispatch(setStageSize(STAGE_SIZE_MODES.hide)),
+    onSetStageBottom: () => dispatch(setStageSize(STAGE_SIZE_MODES.bottom)),
     onSetStageFull: () => dispatch(setFullScreen(true)),
-    onSetStageUnFull: () => dispatch(setFullScreen(false))
+    onSetStageUnFull: () => dispatch(setFullScreen(false)),
 });
 
 export default connect(
