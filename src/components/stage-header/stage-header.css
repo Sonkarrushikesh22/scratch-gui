@@ -16,6 +16,7 @@
 }
 
 .stage-menu-wrapper {
+
     display: flex;
     margin: auto;
     justify-content: space-between;
@@ -27,7 +28,7 @@
 }
 
 .embed-scratch-logo img {
-    height:  1.6rem;
+    height: 1.6rem;
     vertical-align: middle;
     opacity: .6;
 }
@@ -40,7 +41,8 @@
     display: flex;
 }
 
-.stage-size-row > *, .unselect-wrapper {
+.stage-size-row>*,
+.unselect-wrapper {
     /* Use a white background so semi-transparent selection states look correct */
     background-color: $ui-white;
     border-radius: $form-radius;

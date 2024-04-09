@@ -1,4 +1,4 @@
-import keyMirror from 'keymirror';
+import keyMirror from "keymirror";
 
 /**
  * Names for each state of the stage size toggle
@@ -13,7 +13,9 @@ const STAGE_SIZE_MODES = keyMirror({
     /**
      * The "small stage" button is pressed; the user would like a small stage.
      */
-    small: null
+    small: null,
+    hide: null,
+    bottom: null,
 });
 
 /**
@@ -34,27 +36,33 @@ const STAGE_DISPLAY_SIZES = keyMirror({
     /**
      * Small stage (ignores browser width)
      */
-    small: null
+    small: null,
+    hide: null,
+    bottom: null,
 });
 
 // zoom level to start with
 const BLOCKS_DEFAULT_SCALE = 0.675;
 
 const STAGE_DISPLAY_SCALES = {};
+
+// this controls the size of the stage
 STAGE_DISPLAY_SCALES[STAGE_DISPLAY_SIZES.large] = 1; // large mode, wide browser (standard)
 STAGE_DISPLAY_SCALES[STAGE_DISPLAY_SIZES.largeConstrained] = 0.85; // large mode but narrow browser
 STAGE_DISPLAY_SCALES[STAGE_DISPLAY_SIZES.small] = 0.5; // small mode, regardless of browser size
+STAGE_DISPLAY_SCALES[STAGE_DISPLAY_SIZES.hide] = 0.0; // small mode, regardless of browser size
+STAGE_DISPLAY_SCALES[STAGE_DISPLAY_SIZES.bottom] = 0.1; // shifted to bottom
 
 export default {
     standardStageWidth: 480,
     standardStageHeight: 360,
     fullSizeMinWidth: 1096,
-    fullSizePaintMinWidth: 1250
+    fullSizePaintMinWidth: 1250,
 };
 
 export {
     BLOCKS_DEFAULT_SCALE,
     STAGE_DISPLAY_SCALES,
     STAGE_DISPLAY_SIZES,
-    STAGE_SIZE_MODES
+    STAGE_SIZE_MODES,
 };

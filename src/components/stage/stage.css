@@ -113,7 +113,8 @@ stage doesn't "spill" out from under its rounded corners. instead, shift these o
     border-radius: 0.5rem;
     animation-name: flash;
     animation-duration: 0.75s;
-    animation-fill-mode: forwards; /* Leave at 0 opacity after animation */
+    animation-fill-mode: forwards;
+    /* Leave at 0 opacity after animation */
 }
 
 .green-flag-overlay-wrapper {
@@ -122,7 +123,7 @@ stage doesn't "spill" out from under its rounded corners. instead, shift these o
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(0,0,0,0.25);
+    background: rgba(0, 0, 0, 0.25);
     border-radius: 0.5rem;
     pointer-events: all;
     cursor: pointer;
@@ -131,7 +132,7 @@ stage doesn't "spill" out from under its rounded corners. instead, shift these o
 .green-flag-overlay {
     padding: 1rem;
     border-radius: 100%;
-    background: rgba(255,255,255,0.75);
+    background: rgba(255, 255, 255, 0.75);
     border: 3px solid $ui-white;
     display: flex;
     justify-content: center;
@@ -141,7 +142,7 @@ stage doesn't "spill" out from under its rounded corners. instead, shift these o
     height: 5rem;
 }
 
-.green-flag-overlay > img {
+.green-flag-overlay>img {
     width: 100%;
     object-fit: contain;
 }
@@ -149,6 +150,11 @@ stage doesn't "spill" out from under its rounded corners. instead, shift these o
 
 
 @keyframes flash {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
