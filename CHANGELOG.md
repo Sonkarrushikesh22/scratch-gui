@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.3](https://github.com/scratchfoundation/scratch-gui/compare/v4.0.2...v4.0.3) (2024-04-12)
+
+
+### Bug Fixes
+
+* force publish ([dbc8f1d](https://github.com/scratchfoundation/scratch-gui/commit/dbc8f1d6d116e51f6c39e65bc276b24901aa4e57))
+
+## [4.0.2](https://github.com/scratchfoundation/scratch-gui/compare/v4.0.1...v4.0.2) (2024-04-10)
+
+
+### Bug Fixes
+
+* **package:** don't omit src ([8ffff71](https://github.com/scratchfoundation/scratch-gui/commit/8ffff71a5ea86c25e906f5c51024e3ca0aba6c9b))
+
+## [4.0.1](https://github.com/scratchfoundation/scratch-gui/compare/v4.0.0...v4.0.1) (2024-04-10)
+
+
+### Bug Fixes
+
+* **deps:** update dependency cookie to ^0.6.0 ([ebb4b6f](https://github.com/scratchfoundation/scratch-gui/commit/ebb4b6f89f36fc714ad5f54b2c2a338a97d5dd97))
+
 # [4.0.0](https://github.com/scratchfoundation/scratch-gui/compare/v3.6.18...v4.0.0) (2024-03-29)
 
 
