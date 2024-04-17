@@ -36,9 +36,10 @@ import DragLayer from "../../containers/drag-layer.jsx";
 import ConnectionModal from "../../containers/connection-modal.jsx";
 import TelemetryModal from "../telemetry-modal/telemetry-modal.jsx";
 
-import layout, { STAGE_SIZE_MODES } from "../../lib/layout-constants";
+import layout, { STAGE_SIZE_MODES ,STAGE_DISPLAY_SCALES} from "../../lib/layout-constants";
 import { resolveStageSize } from "../../lib/screen-utils";
 import { themeMap } from "../../lib/themes";
+const {standardStageWidth}=layout;
 
 import styles from "./gui.css";
 import addExtensionIcon from "./icon--extensions.svg";
@@ -391,7 +392,8 @@ const GUIComponent = (props) => {
                                             ) : null}
                                         </TabPanel>
                                     </Tabs>
-                                    <Box></Box>
+                                    {backpackVisible?(<Backpack host={backpackHost}/>):null}
+                                   
                                 </Box>
                                 <Box>
                                     <Box

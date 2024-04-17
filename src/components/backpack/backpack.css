@@ -78,17 +78,18 @@
     overflow: hidden;
 }
 
-.backpack-item > div {
+.backpack-item>div {
     /* Need to set the background to get blend-mode below to work */
     background: $ui-primary;
 }
 
 .backpack-item img {
-    mix-blend-mode: multiply; /* Make white transparent for thumnbnails */
+    mix-blend-mode: multiply;
+    /* Make white transparent for thumnbnails */
 }
 
 .more {
-    background: $looks-secondary;
+    background: $motion-primary;
     color: $ui-white;
     border: none;
     outline: none;
