@@ -19,6 +19,10 @@ import translateInsetIconURL from './translate/translate-small.png';
 import makeymakeyIconURL from './makeymakey/makeymakey.png';
 import makeymakeyInsetIconURL from './makeymakey/makeymakey-small.svg';
 
+//Periodic Table icons
+import periodictableIcon from './periodicTable/periodic-table.png';
+import flaskIcon from './periodicTable/flask.svg'
+
 import microbitIconURL from './microbit/microbit.png';
 import microbitInsetIconURL from './microbit/microbit-small.svg';
 import microbitConnectionIconURL from './microbit/microbit-illustration.svg';
@@ -45,6 +49,8 @@ import gdxforIconURL from './gdxfor/gdxfor.png';
 import gdxforInsetIconURL from './gdxfor/gdxfor-small.svg';
 import gdxforConnectionIconURL from './gdxfor/gdxfor-illustration.svg';
 import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
+
+
 
 export default [
     {
@@ -317,5 +323,25 @@ export default [
             />
         ),
         helpLink: 'https://scratch.mit.edu/vernier'
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="Periodic Table"
+                description="Name for the 'Periodic Table' extension"
+                id="gui.extension.periodicTable.name"
+            />
+        ),
+        extensionId: 'periodictable',
+        iconURL: periodictableIcon,
+        insetIconURL: flaskIcon,
+        description: (
+            <FormattedMessage
+                defaultMessage="Learn and play with chemicals"
+                description="Description for the 'Periodic Table' extension"
+                id="gui.extension.periodictable.description"
+            />
+        ),
+        featured: true
     }
 ];

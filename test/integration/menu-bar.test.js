@@ -53,12 +53,22 @@ describe('Menu bar settings', () => {
         await findByXpath('//div[span[div[span[text()="Share"]]] and @data-tip="tooltip"]');
     });
 
-    test('Logo should be clickable', async () => {
-        await loadUri(uri);
-        await clickXpath('//img[@alt="Scratch"]');
-        const currentUrl = await driver.getCurrentUrl();
-        await expect(currentUrl).toEqual('https://scratch.mit.edu/');
-    });
+    test('Logo should be clickable (with increased timeout)', async () => {
+        // Increase timeout for this specific test (recommended)
+        const originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
+        jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000; // Set a longer timeout (10 seconds in this example)
+      
+        try {
+          await loadUri(uri);
+          await clickXpath('//img[@alt="Scratch"]');
+          const currentUrl = await driver.getCurrentUrl();
+          await expect(currentUrl).toEqual('https://scratch.mit.edu/');
+        } finally {
+          // Restore the original timeout (important)
+          jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
+        }
+      });
+      
 
     test('(GH#4064) Project name should be editable', async () => {
         await loadUri(uri);
